@@ -1,3 +1,6 @@
+# SISTEMA BANCÁRIO COM OPERAÇÕES DE EXTRATO, DEPÓSITO, E SAQUE APENAS.
+# UMA VERSÃO MAIS ATUALIZADA COM OPERAÇÕES CRIAR CONTA E ENTRAR NA CONTA, ./bank-system-v2.py.
+# MEU LINKEDIN: https://www.linkedin.com/in/kaua-fabricio-ds
 
 inicio = '''Olá, bem-vindo ao Banco Python, você iniciará com o saldo de R$5000.00 na sua conta, digite seu nome:
 '''
@@ -19,7 +22,6 @@ def menu():
         [q] Sair
     '''
      print(menu)
-
 def extrato(saldo, saques_realizados, numero_depositos, numero_saques, depositos_realizados):
      if (numero_saques == 0) and (numero_depositos == 0):
           first_output = input(f"=============== EXTRATO ===============\nO seu saldo atual é: {saldo}\n=======================================\n Para voltar para o Menu, digite [b]")
@@ -29,7 +31,6 @@ def extrato(saldo, saques_realizados, numero_depositos, numero_saques, depositos
           output = input(f"=============== EXTRATO ===============\nO seu saldo atual é: {saldo}\n\n Saques:\n{saques_realizados}\n\n Depósitos:\n{depositos_realizados}\n=======================================\nPara voltar para o Menu, digite [b]")
           if (output == 'b'):
                menu()
-
 def deposito(saldo, numero_depositos, depositos_realizados):
          try:
               deposito = float(input("Digite o valor do depósito:"))  
@@ -71,7 +72,6 @@ def saque(saldo, numero_saques, saques_realizados, LIMITE_SAQUES):
                menu()
           return saldo, numero_saques, saques_realizados
 menu()
-
 while True:
     opcao = input("Escolha uma opção do menu: ")
 
